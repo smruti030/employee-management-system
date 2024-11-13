@@ -33,24 +33,26 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 ### Install dependencies:
 
-bash
-
-pip install -r requirements.txt
+1.
+   ```bash
+   pip install -r requirements.txt
 
 ### Set up the database:
 
 The application uses SQLite by default, but you can modify config.py for other databases.
 Initialize the database with the following command:
-bash
 
-python -c "from app import db; db.create_all()"
+2.
+   ```bash
+   python -c "from app import db; db.create_all()"
 
 ## Usage
 Run the Flask application:
 
-bash
-
-python app.py
+3.
+   ```bash
+   python app.py
+   
 ## Test the API:
 
 GET /employees: Retrieve all employees.
@@ -58,8 +60,10 @@ POST /employees: Add a new employee.
 PUT /employees/<id>: Update an employee's information by ID.
 DELETE /employees/<id>: Delete an employee by ID.
 Example cURL command to create a new employee:
-bash
-curl -X POST http://127.0.0.1:5000/employees -H "Content-Type: application/json" -d '{"name": "John Doe", "position": "Developer", "department": "Engineering"}'
+
+4.
+   ```bash
+   curl -X POST http://127.0.0.1:5000/employees -H "Content-Type: application/json" -d '{"name": "John Doe", "position": "Developer", "department": "Engineering"}'
 
 ##Testing
 You can use tools like Postman or Curl to interact with the API. For automated testing, consider using pytest with Flask’s testing client to ensure the reliability of your endpoints.
