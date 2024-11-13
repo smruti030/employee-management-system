@@ -21,7 +21,7 @@ Make sure you have Python 3.6 or higher installed.
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/employee-management-system.git
+   git clone https://github.com/smruti030/employee-management-system.git
    cd employee-management-system
 
 ### Create and activate a virtual environment:
